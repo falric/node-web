@@ -1,0 +1,36 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '04:00'
+    cooldown:
+      default-days: 2
+    open-pull-requests-limit: 10
+    groups:
+      dev-dependencies:
+        dependency-type: 'development'
+    labels:
+      - dependencies
+      - dependabot
+      - web-team
+    ignore:
+      - dependency-name: 'eslint'
+        versions: ['9']
+      - dependency-name: 'react'
+        versions: ['19']
+      - dependency-name: 'react-dom'
+        versions: ['19']
+      - dependency-name: 'express'
+        versions: ['5']
+      - dependency-name: 'jest'
+        versions: ['30']
+      - dependency-name: '@types/jest'
+        versions: ['30']
+      - dependency-name: 'jest-environment-jsdom'
+        versions: ['30']
+      - dependency-name: 'jest-extended'
+        versions: ['6']
+      - dependency-name: 'dotenv'
+        versions: ['17']
