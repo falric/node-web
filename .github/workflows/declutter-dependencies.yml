@@ -1,0 +1,21 @@
+name: Declutter Dependencies
+
+on: push
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Ubuntu/Node v20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm ci
+      - name: Run knip
+        run: npx knip
+
+
+
+
