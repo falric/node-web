@@ -6,8 +6,8 @@ on:
         required: false
         default: false
         type: boolean
-  schedule:
-    - cron: '0 2 * * *'
+  # schedule:
+    # - cron: '0 2 * * *'
 
 jobs:
   Npm-Update:
